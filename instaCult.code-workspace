@@ -1,0 +1,70 @@
+{
+  "folders": [
+    {
+      "path": "instaCult.client",
+      "name": "client"
+    },
+    {
+      "path": "instaCult",
+      "name": "server"
+    },
+    {
+      "path": ".github/workflows",
+      "name": "workflows"
+    }
+  ],
+  "settings": {
+    "editor.suggestSelection": "first",
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "javascript.referencesCodeLens.enabled": true,
+    "javascript.referencesCodeLens.showOnAllFunctions": true,
+    "typescript.implementationsCodeLens.enabled": true,
+    "typescript.referencesCodeLens.enabled": true,
+    "typescript.referencesCodeLens.showOnAllFunctions": true,
+    "js/ts.implicitProjectConfig.checkJs": true,
+    "files.exclude": {
+      "**/.nyc_*": true,
+      "**/coverage": true,
+      "**/node_modules": true
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDragAndDrop": false,
+    "eslint.alwaysShowStatus": true,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.codeActionsOnSave.mode": "all",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+    "files.associations": {
+      "*.vue": "vue"
+    },
+    "[vue]": {
+      "editor.defaultFormatter": "Vue.volar"
+    },
+    "workbench.colorCustomizations": {
+      "activityBar.activeBackground": "#82046b",
+      "activityBar.background": "#82046b",
+      "activityBar.foreground": "#e7e7e7",
+      "activityBar.inactiveForeground": "#e7e7e799",
+      "activityBarBadge.background": "#667c04",
+      "activityBarBadge.foreground": "#e7e7e7",
+      "commandCenter.border": "#e7e7e799",
+      "sash.hoverBorder": "#82046b",
+      "statusBar.background": "#82046b",
+      "statusBar.debuggingBackground": "#04821b",
+      "statusBar.debuggingForeground": "#e7e7e7",
+      "statusBar.foreground": "#e7e7e7",
+      "statusBarItem.hoverBackground": "#b30694",
+      "statusBarItem.remoteBackground": "#82046b",
+      "statusBarItem.remoteForeground": "#e7e7e7",
+      "titleBar.activeBackground": "#82046b",
+      "titleBar.activeForeground": "#e7e7e7",
+      "titleBar.inactiveBackground": "#82046b99",
+      "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#82046b"
+  }
+}
