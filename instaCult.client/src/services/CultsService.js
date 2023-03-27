@@ -25,7 +25,7 @@ class CultsService {
    */
   async getCultById(id) {
     AppState.activeCult = null
-    const url = ['api', 'cults', `${id}`]
+    const url = ['api', 'cults', `${id}`] // this is goofy nonsense, just having fun
     const res = await api.get(url.join('/'))
     logger.log('[GET ONE CULT]', res.data)
     AppState.activeCult = res.data
