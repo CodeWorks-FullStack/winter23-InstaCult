@@ -10,6 +10,20 @@ public class Cult : RepoItem<int>
   public Profile Leader { get; set; }
 }
 
+public class CultMembership : Cult
+{
+  public int CultMemberId { get; set; }
+}
+
+
+
+
+
+
+
+
+
+
 // NOTE enums stink, we can come back to this when we have time to mess around
 public enum CategoryEnum
 {
