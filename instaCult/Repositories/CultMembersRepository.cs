@@ -33,17 +33,41 @@ public class CultMembersRepository : IRepository<CultMember, int>
 
   public CultMember GetOne(int id)
   {
-    throw new NotImplementedException();
+    string sql = @"
+    SELECT
+    *
+    FROM cultmembers
+    WHERE id = @id;
+    ";
+    CultMember cultMember = _db.Query<CultMember>(sql, new { id }).FirstOrDefault();
+    return cultMember;
   }
 
   public int Remove(int id)
   {
-    throw new NotImplementedException();
+    string sql = @"
+   DELETE FROM cultmembers
+   WHERE id = @id;
+   ";
+    int rows = _db.Execute(sql, new { id });
+    return rows;
   }
 
   public int Update(CultMember updateData)
   {
     throw new NotImplementedException();
+  }
+
+  internal CultMember FindMember(CultMember cultMemberData)
+  {
+    string sql = @"
+    SELECT
+    *
+    FROM cultmembers
+    WHERE accountId = @accountId AND cultId = @cultId;
+    ";
+    CultMember cultMember = _db.Query<CultMember>(sql, cultMemberData).FirstOrDefault();
+    return cultMember;
   }
 
   internal List<Cultist> GetCultists(int cultId)

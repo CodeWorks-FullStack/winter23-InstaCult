@@ -31,6 +31,12 @@ class CultsService {
     AppState.activeCult = res.data
   }
 
+  async getCultMembers(id) {
+    const res = await api.get(`api/cults/${id}/cultmembers`)
+    logger.log('[GET CULT MEMBERS]', res.data)
+    AppState.cultMembers = res.data
+  }
+
 }
 
 export const cultsService = new CultsService();

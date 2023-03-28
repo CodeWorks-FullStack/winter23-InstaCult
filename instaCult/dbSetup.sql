@@ -39,13 +39,17 @@ CREATE TABLE cultmembers(
   createdAt DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Time Created',
 
   Foreign Key (accountId) REFERENCES accounts(id) ON DELETE CASCADE,
-  Foreign Key (cultId) REFERENCES cults(id) ON DELETE CASCADE
+  Foreign Key (cultId) REFERENCES cults(id) ON DELETE CASCADE,
+  UNIQUE (accountId, cultId)
 ) default charset utf8 COMMENT '';
+
+-- alter table  only needs to happen if you are changing the table after it's been created
+ALTER TABLE cultmembers add UNIQUE (accountId, cultId);
 
 INSERT INTO cultmembers
 (accountId, cultId)
 VALUES
-('634844a08c9d1ba02348913d', 3);
+('6421b7d467701be1e2885bf5', 3);
 
 SELECT 
 c.name,
